@@ -1,0 +1,61 @@
+<!--pages/order/noPayDetial/noPayDetial.wxml-->
+<view class="or-detial">
+  <view class="or-tap">
+    <text class="st">订单状态：</text>
+    <text class="at" wx:if="{{list.status=='0'}}">未付款</text>
+    <text class="at" wx:elif="{{list.status=='1'}}">已完成</text>
+    <text class="at" wx:else >支付失败</text>
+  </view>
+  <view class="or-banner">
+    <view class="ba-a">
+      <image class="or-bg" wx:if="{{list.schemeImage}}" src="{{list.schemeImage}}"></image>
+    </view>
+    <view class="ba-b">{{list.title}}</view>
+    <view class="ba-c">{{list.price}}</view>
+  </view>
+  <view class="or-header">
+    <view class="he-all">
+      <text>付款方式：</text>
+      <text>微信支付</text>
+    </view>
+    <view class="he-all">
+      <text>订单合计：</text>
+      <text class="he-color">{{list.price}}</text>
+    </view>
+  </view>
+  <view class="or-content">
+    <view class="con-new">
+      <text class="con-te1" decode="{{true}}">姓 &nbsp;&nbsp;&nbsp; &nbsp;名:</text>
+      <text class="con-te2">{{list.lossesName}}</text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1" decode="{{true}}">手 &nbsp;机 &nbsp;号:</text>
+      <text class="con-te2">{{list.phone}}</text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1">平台名称:</text>
+      <text class="con-te2">{{list.lossesPlatName}}</text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1">损失金额:</text>
+      <text class="con-te2">{{list.lossesMoney}}</text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1">受骗经过:</text>
+      <text class="con-te2">{{list.lossesDesc}}
+      </text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1">订单编号:</text>
+      <text class="con-te2">{{list.orderNo}}</text>
+    </view>
+    <view class="con-new">
+      <text class="con-te1">创建时间:</text>
+      <text class="con-te2">{{list.createTime}}</text>
+    </view>
+  </view>
+  <view class="or-speed">
+    <view class="sp-title">维权进展：{{list.recoverProgress==null?'':list.recoverProgress}}</view>
+    <view class="sp-new" wx:if="{{list.recoverProgress==null}}">暂无进展~</view>
+  </view>
+</view>

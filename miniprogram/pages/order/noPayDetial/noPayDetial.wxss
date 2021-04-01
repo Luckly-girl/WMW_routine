@@ -1,0 +1,142 @@
+/* pages/order/noPayDetial/noPayDetial.wxss */
+.or-detial {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.or-tap {
+  width: 700rpx;
+  height: 70rpx;
+  border-radius: 15px 15px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+  margin: 30rpx auto;
+  font-size: 14px;
+}
+
+.st {
+  line-height: 70rpx;
+  margin-left: 35rpx;
+}
+
+.at {
+  color: #ff0000;
+}
+
+.or-banner {
+  display: flex;
+  width: 700rpx;
+  height: 200rpx;
+  border-radius: 8px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+  margin: 0 auto;
+}
+
+.ba-a {
+  width: 270rpx;
+  height: 180rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 5px 5px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+.or-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.ba-b,
+.ba-c {
+  flex: 1;
+  line-height: 200rpx;
+}
+
+.ba-c {
+  color: #ff0000;
+}
+
+.or-header {
+  display: flex;
+  flex-direction: column;
+  width: 700rpx;
+  height: 250rpx;
+  border-radius: 8px 8px;
+  background-color: #fff;
+  margin: 10px auto;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+}
+
+.he-all {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 15rpx;
+  font-size: 14px;
+}
+
+.he-color {
+  color: #ff0000;
+}
+
+.he-all:nth-child(3) {
+  border-bottom: none;
+}
+
+.or-content {
+  display: flex;
+  flex-direction: column;
+  width: 700rpx;
+  border-radius: 8px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+  margin: 10px auto;
+}
+
+.con-new {
+  display: flex;
+  margin: 0 15rpx;
+  font-size: 14px;
+  color: #969698;
+  padding: 10rpx 0;
+}
+
+.con-te1 {
+  width: 150rpx;
+  margin-left: 20rpx;
+  text-align: center;
+}
+
+.con-te2 {
+  width: 530rpx;
+  margin-left: 15rpx;
+}
+
+.or-speed {
+  width: 700rpx;
+  height: 250rpx;
+  border-radius: 8px 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 3px #e5e5e5;
+  margin: 10px auto;
+}
+
+.sp-title {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600px;
+  margin-left: 20rpx;
+}
+
+.sp-new {
+  margin-top: 45rpx;
+  margin-left: 280rpx;
+  color: #999999;
+  font-size: 14px;
+}

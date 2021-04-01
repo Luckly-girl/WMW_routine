@@ -1,0 +1,15 @@
+<!--components/popup/popup.wxml-->
+<view class="wx-popup" hidden="{{flag}}">
+  <view class='popup-container'>
+    <view class="wx-popup-title">{{title}}</view>
+    <view class="wx-popup-con">{{contentText}}</view>
+    <view wx:if="{{show1=='1'}}" class="wx-popup-btn">
+      <button class="buts btn-ok" open-type="getUserInfo" bindgetuserinfo="_success">{{btn_ok}}</button>
+      <button class="buts btn-no" bindtap='_error'>{{btn_no}}</button>
+    </view>
+     <view wx:else class="wx-popup-btn">
+      <button class="buts btn-ok" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">登录</button>
+      <button class="buts btn-no" bindtap='_error'>{{btn_no}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/homePage/law/law.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="lay">
+  <view class="lay-view" wx:for="{{layList}}" wx:key="key" data-id="{{item.id}}" bindtap="toFwzs"  >
+    <view class="lay-name">{{item.title}}</view>
+    <template is="wxParse" data="{{wxParseData:list[index]}}" />
+  </view>
+</view>

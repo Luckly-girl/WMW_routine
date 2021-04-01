@@ -1,0 +1,46 @@
+<!--pages/homePage/Platform/Platform.wxml-->
+<view class="Platform">
+  <view class="pf-head">黑平台线索分析</view>
+  <view class="form-data">
+    <view class="from-view">
+      <text>平台名称:</text>
+      <input  bindinput='teamNameClick' value='{{platName}}' placeholder="请输入平台名称" />
+    </view>
+    <view class="from-view">
+      <text>平台官网/链接：</text>
+      <input bindinput='teamLinkClick' value="{{platUrl}}" placeholder="请输入平台官网/链接"></input>
+    </view>
+    <view class="from-view">
+      <text>直播间带单群名称：</text>
+      <input bindinput='teamRoomClick'  value="{{guideMember}}"
+        placeholder="请输入直播间带单群名称"></input>
+    </view>
+    <view class="from-view">
+      <text>相关带单老师信息助理信息：</text>
+      <input bindinput='teamTeachClick' value="{{guideType}}"
+        placeholder="请输入相关带单老师信息助理信息"></input>
+    </view>
+    <view class="from-view">
+      <text>补充信息：</text>
+      <input bindinput='teamInfoClick' value="{{remark}}"
+        placeholder="请输入补充信息"></input>
+    </view>
+    <view class="from-but">
+      <text bindtap="toptDetail">查询</text>
+    </view>
+  </view>
+  <image class="bg_gg" src="../../../images/home/bg_gg@2x.png"></image>
+  <view class="pf-head pf-headII">黑平台线索分析</view>
+  <view class="pf-li" wx:for="{{pfList}}" wx:key="key" bindtap="toptDetail">
+    <image wx:if="{{item.image}}" class="pf-img" src="{{item.image}}"></image>
+    <view class="pf-content">
+      <view class="pf-text">
+        <text>{{item.platName}}</text>
+        <text>官网:{{item.platUrl}}</text>
+      </view>
+      <view class="pf-pj">
+        <text>{{item.tip}}</text>
+      </view>
+    </view>
+  </view>
+</view>

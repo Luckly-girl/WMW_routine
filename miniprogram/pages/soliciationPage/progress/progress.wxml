@@ -1,0 +1,33 @@
+<!--pages/soliciationPage/progress/progress.wxml-->
+<!--pages/soliciationPage/activity/activity.wxml-->
+<view>
+	<view class="py-num">
+    <image src="../../../images/my/guanyu.png"></image>
+    <text>提示：更新最新10条</text>
+  </view>
+	<view class="py-view" wx:for="{{activityList}}" wx:key="key">
+		<view class="py-bq">
+			{{item.type}}
+		</view>
+		<view class="py-header">
+			<image wx:if="{{item.logo}}" class="qy-icon" src="{{item.logo}}"></image>
+			<text>{{item.title}}</text>
+		</view>
+		<view class="py-from">
+			<text>内容简介:</text>
+			<view>{{item.description }}</view>
+		</view>
+		<view class="py-from">
+			<text>维权起始时间:</text>
+			<view>{{item.createTime}}</view>
+		</view>
+		<view class="py-from">
+			<text>维权最新进展:</text>
+			<view>{{item.progress }}</view>
+		</view>
+		<view class="py-from">
+			<text>维权提醒:</text>
+			<view>{{item.prompt}}</view>
+		</view>
+	</view>
+</view>

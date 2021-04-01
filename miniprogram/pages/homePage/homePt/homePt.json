@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Platform":"../Platform/Platform",
+    "law":"../law/law",
+    "servic":"../servic/servic",
+    "Inquiry":"../Inquiry/Inquiry"
+  },
+  "navigationBarTitleText":"平台查询"
+}

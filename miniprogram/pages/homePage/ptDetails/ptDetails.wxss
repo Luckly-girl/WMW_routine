@@ -1,0 +1,42 @@
+/* pages/homePage/ptDetails/ptDetails.wxss */
+.ptDetails {
+  height: 100vh;
+  width: 750rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding:0 20rpx;
+  border-top: 1rpx solid #F7F4F8;
+}
+
+.jt-detial{
+  margin: 10px auto;
+}
+
+.jt-name {
+  height: 80rpx;
+  line-height: 80rpx;
+  /* border-bottom: 1rpx dashed #F7F4F8; */
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.jt-view {
+  min-height: 70rpx;
+  line-height: 70rpx;
+  border-bottom: 1rpx dashed #F7F4F8;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.jt_key {
+  width: 140rpx;
+  text-align: justify;
+  text-align-last: justify;
+  font-weight: 700;
+}
+.jt_val{
+  flex: 1;
+  padding-left: 16rpx;
+  color: #999999;
+}

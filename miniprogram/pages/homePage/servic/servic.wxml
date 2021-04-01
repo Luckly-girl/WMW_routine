@@ -1,0 +1,7 @@
+<!--pages/homePage/servic/servic.wxml-->
+<view class="servic">
+  <view class="servicList" wx:for="{{servicList}}" wx:key="key" data-id="{{item.id}}" bindtap="toFwzs">
+    <image wx:if="{{item.image}}" class="servic-img" src="{{item.image}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+<!--miniprogram/pages/Solicitation/Solicitation.wxml-->
+<view class='Solicitation'>
+  <view class="Solicitation-head">
+    <text class="{{item==modalName?'text_active':''}}" wx:for="{{modalList}}" wx:key="key" data-name="{{item}}"
+      bindtap="modalChange">{{item}}</text>
+  </view>
+  <view class="py-navs">
+    <view class="py-view" wx:if="{{modalName=='征集活动'}}" wx:for="{{activityList}}" wx:key="key">
+      <view class="py-bq">
+        {{item.label}}
+      </view>
+      <view class="py-header">
+        <image wx:if="{{item.logo}}" class="qy-icon" src="{{item.logo}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+      <view class="py-from">
+        <text>发起人:</text>
+        <view>{{item.initiator}}</view>
+      </view>
+      <view class="py-from">
+        <text>维权编号:</text>
+        <view>{{item.id}}</view>
+      </view>
+      <view class="py-from">
+        <text>维权对象:</text>
+        <view>{{item.object}}</view>
+      </view>
+      <view class="py-from">
+        <text>可参与对象:</text>
+        <view>{{item.target}}</view>
+      </view>
+      <view class="py-from">
+        <text>问题描述:</text>
+        <view>{{item.description}}</view>
+      </view>
+      <view class="py-bqli">
+        <text>{{item.label}}</text>
+      </view>
+      <view class="py-sumbit">
+        <text class="py-sumbitType">已发布</text>
+        <text class="sumbit-but" data-index="{{index}}" bindtap="handleConsult">加入</text>
+      </view>
+      <view class="py-zkBar" data-index="{{index}}" bindtap="showJd">
+        <text>{{item.zk==true?'收集进度收起':'收集进度展开'}}</text>
+        <image class="zk-icon" src="../../images/home/ico_{{item.zk==true?'zk':'sq'}}.png"></image>
+      </view>
+      <view wx:if="{{item.zk}}">
+        <view class="py-jdView" wx:for="{{list}}" wx:key="key">
+          <view class="icon-gou">
+            <image src="../../images/home/ico_gou.png"></image>
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+      <view class="container">
+        <popup id='popup' title='提示' content='使用该功能需要您的登录' btn_no='取消' btn_ok='确定' bind:error="_error"
+          bind:success="_success">
+        </popup>
+      </view>
+    </view>
+    <view wx:if="{{modalName=='实时进展'}}">
+      <view class="py-num">
+        <image src="../../images/my/guanyu.png"></image>
+        <text>提示：更新最新10条</text>
+      </view>
+      <view class="py-view" wx:for="{{activityList}}" wx:key="key">
+        <view class="py-bq">
+          {{item.label}}
+        </view>
+        <view class="py-header">
+          <image wx:if="{{item.logo}}" class="qy-icon" src="{{item.logo}}"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="py-from">
+          <text>内容简介:</text>
+          <view>{{item.description }}</view>
+        </view>
+        <view class="py-from">
+          <text>维权起始时间:</text>
+          <view>{{item.createTime}}</view>
+        </view>
+        <view class="py-from">
+          <text>维权最新进展:</text>
+          <view>{{item.progress }}</view>
+        </view>
+        <view class="py-from">
+          <text>维权提醒:</text>
+          <view>{{item.prompt}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

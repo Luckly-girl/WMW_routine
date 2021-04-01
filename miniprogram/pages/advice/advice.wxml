@@ -1,0 +1,32 @@
+<!--pages/advice/advice.wxml-->
+<view class="advice">
+  <view class="ad-a">分类标签</view>
+  <view class="ad-b">
+    <text class="{{item.id==selectId?'text-active':'ad-one'}}" wx:for="{{adviceList}}" data-index="{{index}}"
+      bindtap="clickOne">{{item.name}}
+    </text>
+  </view>
+  <view class="ad-content">
+    <view class="ad-a">内容描述</view>
+    <textarea class="desc" value="{{content}}" maxlength="1000"  bindinput="contentClick" placeholder="您可以在这里输入内容描述"
+      placeholder-class="desc-place" />
+    </view>
+    <view class="ad-a">姓名</view>
+    <view>
+      <input class="ad-input" value="{{username}}" bindinput="nameClick"placeholder-class="desc-place" placeholder="请输入姓名" />
+    </view>
+    <view class="ad-a">联系方式</view>
+    <view>
+      <input class="ad-input" type="number" value="{{phoneNum}}" maxlength="11" bindinput="phoneNumClick" placeholder-class="desc-place" placeholder="请输入联系方式" />
+    </view>
+    <view wx:if="{{show1}}" class="trueTip">
+      提交成功，等待处理
+    </view>
+    <view  class="ad-foot" bindtap="submitHandle">
+      提交
+    </view>
+    <view class="container">
+      <popup id='popup' title='提示' content='是否确认提交' btn_no='取消' btn_ok='确定' bind:error="_error" bind:success="_success">
+      </popup>
+    </view>
+</view>

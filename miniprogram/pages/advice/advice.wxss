@@ -1,0 +1,84 @@
+/* pages/advice/advice.wxss */
+.advice {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.ad-a {
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 30rpx;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ad-b {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.text-active{
+  background-color: #5089F2;
+  color: #fff;
+  border-radius: 5px 5px;
+  width: 180rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-left: 50rpx;
+}
+.ad-one {
+  background-color: #F5F5F5;
+  color:#5089F2 ;
+  border-radius: 5px 5px;
+  width: 180rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-left: 50rpx;
+}
+.desc{
+  width: 700rpx;
+  height: 300rpx;
+  background-color: #F7F4F8;
+  border-radius: 5px 5px;
+  margin: 5rpx auto;
+  padding: 20rpx 0 0 30rpx;
+  font-size: 14px;
+}
+.desc-place{
+  font-size: 14px;
+}
+.ad-input{
+  width: 700rpx;
+  height: 70rpx;
+  background-color: #F7F4F8;
+  border-radius: 5px 5px;
+  margin: 5rpx auto;
+  padding-left: 30rpx;
+  font-size: 14px;
+}
+.trueTip{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 100vh;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  font-size: 12px;
+  color: red;
+}
+.ad-foot{
+  position: absolute;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #5089F2;
+  color: #fff;
+  text-align: center;
+  border-radius: 40rpx 40rpx;
+}

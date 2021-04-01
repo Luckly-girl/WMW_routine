@@ -1,0 +1,78 @@
+<!--miniprogram/pages/programme/programme.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="programme">
+	<scroll-view class="programme-head" scroll-x="true" scroll-with-animation bindscroll="scrollMove"
+		scroll-left='{{scrollLeft}}'>
+		<text class="{{index+1 == indexId?'text_active':''}}" wx:for="{{programmeList}}" wx:key="key"
+			data-index="{{index+1}}" bindtap="paChange">{{item.title}}</text>
+	</scroll-view>
+	<!-- <view class="">
+		
+	</view> -->
+	<view class="programme-centent">
+		<view wx:for="{{programmeList}}" wx:key="key">
+			<image wx:if="{{index+1== indexId}}" class="programme-img" src="{{item.image}}"></image>
+		</view>
+		<view class="centent-view">
+			<view class="pa-introduce">
+				<text class="introduce-key">方案介绍:</text>
+				<template wx:for="{{programmeList}}" wx:key="key" wx:if="{{index+1== indexId}}" is="wxParse"
+					data="{{wxParseData:list[index]}}" />
+			</view>
+			<view class="programme-from">
+				<view class="from-view">
+					<text class="from-key">价格</text>:
+					<text class="from-price" wx:for="{{programmeList}}" wx:key="key"
+						wx:if="{{index+1== indexId}}">￥{{item.price}}</text>
+				</view>
+				<view class="from-view">
+					<text class="from-key">称呼</text>:
+					<input class="from-val" value="{{userName}}" bindinput="nameClick" placeholder="请输入您的称呼"></input>
+				</view>
+				<view class="from-view">
+					<text class="from-key">手机号</text>:
+					<input class="from-val" type="number" value="{{phoneNum}}" bindinput="phoneClick" maxlength="11"
+						placeholder="请输入您的手机号"></input>
+				</view>
+				<view class="from-view">
+					<text class="from-key">平台名称</text>:
+					<input class="from-val" value="{{teamName}}" bindinput="teamClick" placeholder="请输入被骗平台名称"></input>
+				</view>
+				<view class="from-view">
+					<text class="from-key">金额</text>:
+					<input class="from-val" type="number" value="{{amount}}" bindinput="amountClick"
+						placeholder="请输入被受骗金额"></input>
+				</view>
+				<view class="from-view">
+					<text class="from-key">经过</text>:
+					<textarea auto-height="true" fixed="true" class="from-val" value="{{pass}}" bindinput="passClick"
+						placeholder="请输入您的被骗经过"></textarea>
+				</view>
+				<view class="imgs">
+					<!-- 传多张图片 -->
+					<view class="imgLi" wx:for="{{imgLis}}" wx:key="key">
+						<image class="imgView" bindtap="lookImg" data-src="{{item}}" src="{{item}}"></image>
+						<image class="imgDetel" bindtap="deteleImg" data-index="{{index}}" src="../../images/home/cha.png"></image>
+					</view>
+					<view class="imgLi addImg" bindtap="saveImg">
+						<image class="imgUp" src="../../images/home/ico_up.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="Tips">选择适合自己的方案有助于更好的帮助到您。</view>
+		<view class="Notice">
+			<view class="audo {{notice?'auto_active':''}}" bindtap="noticeTap">
+				<image class="" wx:if="{{notice}}" src="../../images/home/ico_gou.png"></image>
+			</view>
+			<view class="xiey" data-index="{{indexId}}" bindtap="toAgreement">用户服务协议须知</view>
+		</view>
+		<view class="InquiryFrom-but" bindtap="submit">提交</view>
+	</view>
+	<zixun bindtap="handleConsult"></zixun>
+	<view class="container">
+		<popup id='popup' title='提示' content='使用该功能需要您的登录' btn_no='取消' btn_ok='确定' bind:error="_error"
+			bind:success="_success">
+		</popup>
+	</view>
+</view>

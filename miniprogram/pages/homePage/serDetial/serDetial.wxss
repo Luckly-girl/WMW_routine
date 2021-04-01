@@ -1,0 +1,22 @@
+/* pages/homePage/serDetial/serDetial.wxss */
+.fwzsDetails{
+  height: 100%;
+  width: 750rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-top: 15rpx solid #F7F4F8;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fwzs-hh{
+  padding: 20rpx 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.fwzs-text{
+  width: 600rpx;
+  line-height: 40rpx;
+  font-size: 15px;
+}

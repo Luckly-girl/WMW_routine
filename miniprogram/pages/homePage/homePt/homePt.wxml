@@ -1,0 +1,12 @@
+<!--pages/homePage/homePt/homePt.wxml-->
+<view class="pts">
+	<view class="pt-head">
+		<text class="{{name==item.name?'text_active':''}}" wx:for="{{ptList}}" wx:key="key" data-name="{{item.name}}" bindtap="ptChange" >{{item.name}}</text>
+	</view>
+	<view class="pt-navs">
+		<Platform wx:if="{{name=='平台查询'}}"></Platform>
+		<law wx:elif="{{name=='法律法规'}}"></law>
+		<servic wx:elif="{{name=='服务介绍'}}"></servic>
+		<Inquiry wx:else></Inquiry>
+	</view>
+</view>

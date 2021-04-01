@@ -1,0 +1,7 @@
+<!--components/zixu/zixu.wxml-->
+<view>
+	<view class="zixun" >
+		<image bindtap="goRoom" class="xixu-image" src="../../images/home/ico_zx@2x.png"></image>
+		<button class="contact-but" open-type="{{flag? 'contact':''}}"   >客服会话</button>
+	</view>
+</view>

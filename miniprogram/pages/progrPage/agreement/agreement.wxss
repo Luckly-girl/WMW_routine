@@ -1,0 +1,28 @@
+/* pages/progrPage/agreement/agreement.wxss */
+.agreement{
+  width: 750rpx;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.agreement-view{
+  width: 690rpx;
+  max-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20rpx;
+  padding-bottom: 50rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  box-shadow: 0 0 10rpx 5rpx #F7F6F7;
+}
+.hh{
+  font-size: 20px;
+  line-height: 70rpx;
+  font-weight: 700;
+}
+.pp{
+  margin-bottom: 40rpx;
+  font-size: 15px;
+  line-height: 50rpx;
+}

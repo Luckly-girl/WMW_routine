@@ -1,0 +1,141 @@
+/* pages/soliciationPage/progress/progress.wxss */
+/* pages/soliciationPage/activity/activity.wxss */
+.py-view{
+  width: 700rpx;
+  border-radius: 15rpx;
+  box-shadow: 0 0 10rpx 5rpx #F7F6F7;
+  box-sizing: border-box;
+  padding:25rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.py-num{
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 10rpx;
+  margin-bottom: 20rpx;
+  color: #999999;
+}
+.py-num image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 15rpx;
+}
+.py-bq{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50rpx;
+  color: #ffffff;
+  background-color: #F56C6C;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  font-size: 15px;
+  border-radius: 0 15rpx 0 0;
+}
+.py-header{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30rpx;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px dashed #ECEBEC;
+}
+.qy-icon{
+  width: 200rpx;
+  height: 140rpx;
+  margin-right: 30rpx;
+}
+.py-from{
+  display: flex;
+  align-items: flex-start;
+  min-height: 70rpx;
+  box-sizing: border-box;
+  padding-top: 15rpx;
+  font-size: 15px;
+}
+.py-from text{
+  width: 200rpx;
+  font-weight: 700;
+}
+.py-from view{
+  flex: 1;
+  line-height: 40rpx;
+}
+.py-bqli{
+  min-height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15rpx 0  30rpx;
+}
+.py-bqli text{
+  height: 40rpx;
+  font-size: 13px;
+  line-height: 40rpx;
+  padding: 5rpx 10rpx;
+  color: #E6A23C;
+  border: 1px solid #E6A23C;
+  margin: 0 15rpx 15rpx 0;
+  border-radius: 6rpx;
+}
+.py-sumbit{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+  border-bottom: 1px dashed #ECEBEC;
+}
+.py-sumbitType{
+  color: #5089F2;
+}
+.sumbit-but{
+  width: 180rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background-color: #538BF3;
+  text-align: center;
+  line-height: 60rpx;
+  color: #ffffff;
+}
+.py-zkBar{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666666;
+}
+.py-zkBar text{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.zk-icon{
+  height: 15rpx;
+  width: 28rpx;
+  margin: 0 10rpx;
+}
+.py-jdView{
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #666666;
+}
+.icon-gou{
+  width:32rpx;
+  height: 32rpx;
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5089F2;
+  margin-right: 15rpx;
+}
+.icon-gou image{
+  width: 25rpx;
+  height: 25rpx;
+}

@@ -1,0 +1,60 @@
+/* pages/homePage/Inquiry/Inquiry.wxss */
+.Inquiry {
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.InquiryList {
+  box-shadow: 0 0 10rpx 10rpx #F7F6F7;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+  min-height: 200rpx;
+  box-sizing: border-box;
+  padding: 20rpx 15rpx;
+}
+
+.Inquiry-top {
+  min-height: 60rpx;
+  box-sizing: border-box;
+  padding: 8rpx 20rpx 8rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.Inquiry-name {
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.price {
+  color: #F56C6C;
+}
+
+.InquiryFrom{
+  padding: 40rpx 0 200rpx;
+}
+.InquiryFrom-view{
+  width: 650rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;  
+  padding: 15rpx 0rpx;
+  margin-bottom: 160rpx;
+  border-bottom: 1rpx solid #F7F6F7;
+}
+.InquiryFrom-but{
+  width: 650rpx;
+  height: 85rpx;
+  margin: 0 auto;
+  border-radius: 43rpx;
+  background-color: #538BF3;
+  text-align: center;
+  line-height: 85rpx;
+  color: #ffffff;
+}

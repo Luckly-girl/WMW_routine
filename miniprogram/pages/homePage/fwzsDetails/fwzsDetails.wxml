@@ -1,0 +1,5 @@
+<!--pages/homePage/fwzsDetails/fwzsDetails.wxml-->
+<view class="fwzsDetails">
+  <view class="fwzs-hh">服务范围介绍</view>
+  <view class="fwzs-text" wx:for="{{list}}" wx:key="key" wx:if="{{item.id==tid}}">{{item.content}}</view>
+</view>

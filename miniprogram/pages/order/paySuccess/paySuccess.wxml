@@ -1,0 +1,19 @@
+<!--pages/order/paySuccess/paySuccess.wxml-->
+<view class="pa-succ">
+  <view class="pa-logo">
+    <image class="pa-bg" src='../../../images/my/icon_success@2x.png'></image>
+  </view>
+  <view class="pa-ban">
+    <view class="pa-num">
+      <text style="color:#9A9A9A">订单编号：</text>
+      <text>{{orderNo}}</text>
+    </view>
+    <view class="pa-num">
+      <text style="color:#9A9A9A">实付金额：</text>
+      <text style="color:#ff0000">{{orderAmount}}</text>
+    </view>
+  </view>
+  <view class="pa-foot" bindtap="successHandle">
+    查看订单
+  </view>
+</view>

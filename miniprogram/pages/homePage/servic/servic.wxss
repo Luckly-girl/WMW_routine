@@ -1,0 +1,23 @@
+/* pages/homePage/servic/servic.wxss */
+.servic{
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.servicList{
+  width: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  font-size: 15px;
+}
+.servic-img{
+  width: 260rpx;
+  height: 220rpx;
+  margin-bottom: 15rpx;
+}

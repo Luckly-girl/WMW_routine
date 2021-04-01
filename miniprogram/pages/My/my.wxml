@@ -1,0 +1,53 @@
+<!--miniprogram/pages/My/my.wxml-->
+<view class="my">
+  <view class="my_top">
+    <image class="bg_my" src="../../images/my/bg_my@2x.png">
+    </image>
+    <image class="ico" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../images/my/ico@2x.png'}}"></image>
+    <text wx:if="{{userInfo.nickName}}"  class="bg_name">{{userInfo.nickName}}</text>
+    <text wx:else bindtap="handleSubmit" class="bg_name">请授权登录</text>
+  </view>
+  <view class="banner">
+    <view class="my_view" wx:for="{{myList}}" wx:key="key" data-index="{{index}}" bindtap="goDetial">
+      <image class="my_logo" src="../../images/my/{{item.path}}.png"></image>
+      {{item.name}}
+    </view>
+  </view>
+  <view class="section">
+    <!-- <view class="se_list" bindtap="handleSubmit">
+      <image class="se_img" src="../../images/my/weiquan.png"></image>
+      <text class="se_contion">维权合作</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view> -->
+    <view class="se_list" bindtap="aboutHandle">
+      <image class="se_img" src="../../images/my/guanyu.png"></image>
+      <text class="se_contion">关于我们</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view>
+    <view class="se_list" bindtap="statusHandle">
+      <image class="se_img" src="../../images/my/jindu.png"></image>
+      <text class="se_contion">维权进度查询</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view>
+    <view class="se_list" bindtap="newsHandle">
+      <image class="se_img" src="../../images/my/pingtai.png"></image>
+      <text class="se_contion">受骗平台消息更新</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view>
+    <view class="se_list" bindtap="noticeHandle">
+      <image class="se_img" src="../../images/my/tongzhi.png"></image>
+      <text class="se_contion">通知</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view>
+    <view class="se_list" bindtap="adviceHandle">
+      <image class="se_img" src="../../images/my/jianyi.png"></image>
+      <text class="se_contion">反馈建议</text>
+      <image src="../../images/my/ico_go.png" class="se_ico">></image>
+    </view>
+    <!-- 维权合作对话框 -->
+    <view class="container">
+      <popup id='popup' title='提示'  content='使用该功能需要您的登录' btn_no='取消' btn_ok='确定' bind:error="_error" bind:success="_success">
+      </popup>
+    </view>
+  </view>
+</view>

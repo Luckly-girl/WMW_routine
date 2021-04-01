@@ -1,0 +1,24 @@
+<!--pages/homePage/ptDetails/ptDetails.wxml-->
+<view class="ptDetails">
+  <view wx:for="{{list}}" wx:key="key" class="jt-detial">
+    <view class="jt-name">
+      {{item.platName}}
+    </view>
+    <view class="jt-view">
+      <text class="jt_key">官网</text>:
+      <text class="jt_val">{{item.platUrl}}</text>
+    </view>
+    <view class="jt-view">
+      <text class="jt_key">直播间</text>:
+      <text class="jt_val">{{item.guideType}}</text>
+    </view>
+    <view class="jt-view">
+      <text class="jt_key">相关人员</text>:
+      <text class="jt_val">{{item.guideMember}}</text>
+    </view>
+    <view class="jt-view">
+      <text class="jt_key">带单群</text>:
+      <text class="jt_val">{{item.guideMember}}</text>
+    </view>
+  </view>
+</view>

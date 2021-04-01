@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/programme/programme",
+    "pages/Solicitation/Solicitation",
+    "pages/My/my",
+    "components/zixu/zixu",
+    "pages/homePage/homePt/homePt",
+    "pages/homePage/ptDetails/ptDetails",
+    "pages/homePage/fwzsDetails/fwzsDetails",
+    "pages/order/orderDetial/orderDetial",
+    "pages/order/noPayDetial/noPayDetial",
+    "pages/order/paySuccess/paySuccess",
+    "pages/progrPage/agreement/agreement",
+    "pages/about/about",
+    "pages/noticeNews/noticeNews",
+    "pages/advice/advice",
+    "components/popup/popup",
+    "pages/homePage/serDetial/serDetial",
+    "pages/news",
+    "pages/news/news"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "法维追损网",
+    "navigationBarTextStyle": "black"
+  },
+  "entryPagePath": "pages/home/home",
+  "usingComponents": {
+    "popup": "./components/popup/popup"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#508AF2",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      },
+      {
+        "pagePath": "pages/programme/programme",
+        "text": "方案服务",
+        "iconPath": "images/programme.png",
+        "selectedIconPath": "images/programme_active.png"
+      },
+      {
+        "pagePath": "pages/Solicitation/Solicitation",
+        "text": "征集活动",
+        "iconPath": "images/Solicitation.png",
+        "selectedIconPath": "images/Solicitation_active.png"
+      },
+      {
+        "pagePath": "pages/My/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

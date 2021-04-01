@@ -1,0 +1,29 @@
+/* pages/homePage/homePt/homePt.wxss */
+.pts{
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+.pt-head{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  margin-bottom: 10rpx;
+}
+.pt-head text{
+  height: 80rpx;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+.text_active{
+  border-bottom: 4rpx solid #508AF2;
+  color: #508AF2;
+}
+.pt-navs{
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+}

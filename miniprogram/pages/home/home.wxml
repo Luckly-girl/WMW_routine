@@ -1,0 +1,55 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class="home">
+	<view class="home-top">
+		<swiper autoplay="true" interval="3000" circular="true">
+			<block wx:for="{{imgUrl}}" wx:key="key">
+				<swiper-item>
+					<image wx:if="{{item.imgUrl}}" class="banners" src="{{item.imgUrl}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="home-tz">
+			<image class="lingd" src="../../images/home/ico_gg@2x.png"></image>
+			<swiper class="banner-tz" autoplay="true" interval="5000" circular="true" vertical="true">
+				<block wx:for="{{consultList}}" wx:key="key">
+					<swiper-item class='swiper_view'>
+						<text>{{item.name}}发起了询问</text>
+						<text class="swiper_time">{{item.consuls}}</text>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class="home-pt">
+			<view class="pt_view" wx:for="{{ptList}}" wx:key="key" data-index="{{index}}" bindtap="toPath">
+				<view class="logo-view">
+					<image class="pt-logo" src="../../images/home/{{item.path}}.png"></image>
+				</view>
+				<view>
+					{{item.name}}
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="home-content">
+		<view class="hh">投资陷阱盘点</view>
+		<view class="new-view" wx:for="{{newList}}" wx:key="key">
+			<view class="new-top">
+				<view class="new-content">
+					<view class="htitle">{{item.title}}</view>
+					<view class="new-text">
+						{{item.runWay}}
+					</view>
+				</view>
+			</view>
+			<view class="new-foot">
+				<button class="Inquiry" open-type="{{flag? 'contact':''}}" bindtap="handleConsult">免费咨询</button>
+			</view>
+		</view>
+		<zixun bindtap="handleConsult" ></zixun>
+		<view class="container">
+			<popup id='popup' title='提示' content='使用该功能需要您的登录' btn_no='取消' btn_ok='确定' bind:error="_error"
+				bind:success="_success">
+			</popup>
+		</view>
+	</view>
+</view>

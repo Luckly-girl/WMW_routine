@@ -1,0 +1,10 @@
+<!--pages/news/news.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="about">
+  <view class="ab-new" wx:for="{{result}}" wx:key="key">
+    <view class="ab-title">{{item.title}}</view>
+    <view class="ab-more">
+      <template is="wxParse" data="{{wxParseData:list[index]}}" />
+    </view>
+  </view>
+</view>

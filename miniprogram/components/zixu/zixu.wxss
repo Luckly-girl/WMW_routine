@@ -1,0 +1,27 @@
+/* components/zixu/zixu.wxss */
+.zixun{
+  position: fixed;
+  bottom: 140rpx;
+  right: 40rpx;
+  height: 140rpx;
+  width: 140rpx;
+  overflow-y: hidden;
+}
+.xixu-image{
+  height: 100%;
+  width: 100%;
+}
+.contact-but{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+.container{
+
+}

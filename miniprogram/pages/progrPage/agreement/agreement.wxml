@@ -1,0 +1,8 @@
+<!--pages/progrPage/agreement/agreement.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="agreement">
+  <view class="agreement-view">
+    <view class="hh">一 方案服务介绍：</view>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>

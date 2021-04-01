@@ -1,0 +1,22 @@
+<!--pages/homePage/Inquiry/Inquiry.wxml-->
+<view class="Inquiry">
+	<view wx:if="{{show1==true}}" class="InquiryFrom">
+		<view class="InquiryFrom-view">
+			<text>手机号：</text>
+			<input value="{{phone}}" bindinput="phoneinput" maxlength="11" type="number" placeholder="请输入手机号"></input>
+		</view>
+    
+		<view class="InquiryFrom-but" bindtap="submit">提交</view>
+	</view>
+	<view  wx:else>
+		<view class="InquiryList" wx:for="{{InquiryList}}" wx:key="key" bindtap="Inquiry">
+			<view class="Inquiry-top">
+				<text class="Inquiry-name">{{item.title}}</text>
+				<text class="price">￥{{item.price}}</text>
+			</view>
+			<view>
+				{{item.content}}
+			</view>
+		</view>
+	</view>
+</view>
